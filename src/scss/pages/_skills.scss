@@ -1,0 +1,132 @@
+.skills-section {
+  @include common-section-css;
+  position: relative;
+
+  &__bg {
+    @include absBgFull;
+    filter: brightness(20%);
+
+    background-image: url('/src/assets/img/stars-spiral.webp');
+    // background-attachment: fixed;
+  }
+
+  display: grid;
+  // justify-items: center;
+  // align-items: center;
+
+  // To ensure each skill-type row does not take more than needed space
+  grid-template-rows: min-content repeat(3, min-content);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: min-content repeat(4, 1fr);
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+.skills-writeup {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+  }
+}
+
+.skill-type {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-bg-dark),
+    var(--color-primary-dark)
+  );
+  text-align: center;
+  opacity: 0.9;
+
+  box-shadow: var(--shadow-dark);
+
+  // min-height: 40rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+
+  &--1,
+  &--4 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 60%;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+  }
+
+  &--1 {
+  }
+
+  &--2 {
+  }
+
+  &--3 {
+  }
+
+  &--4 {
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+}
+
+.skills {
+  font-family: Relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  grid-gap: 1.5rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+  }
+}
+
+.skill {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-out;
+
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to bottom right,
+      var(--color-primary),
+      var(--color-bg-light-dark)
+    );
+
+    // background-color: var(--color-bg-lighter-dark);
+    transform: translateY(-0.5rem) scale(1.03);
+    box-shadow: 0 2rem 2rem rgba(black, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    /* This creates the button pressed effect after the raising is reduced from hovered height */
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+}

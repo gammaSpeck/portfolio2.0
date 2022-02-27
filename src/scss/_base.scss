@@ -1,0 +1,76 @@
+// Define all CSS vars here to be used throughout
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-primary-light-smooth: rgba(255, 51, 102, 0.85);
+  --color-primary-dark-smooth: rgba(186, 38, 93, 0.85);
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-bg-dark: #181818;
+  --color-bg-light-dark: #292727;
+  --color-bg-lighter-dark: #484747;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+// CSS vars wont work for media queries
+$bp-largest: 75em; // 1200px/16px = 75
+$bp-large: 68.75em; // 1100px/16px = 68.75
+$bp-medium: 56.25em; // 900px/16px = 56.25
+$bp-small: 37.5em; // 600px/16px = 37.5
+$bp-smallest: 31.25em; // 500px/16px = 31.25
+
+// Consistent Paddings
+
+// FONT VARIABLES
+$font-primary: Gza, sans-serif;
+$font-display: Relative, sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* This makes sure all elements inherit that property */
+  // scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; // We want 1rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 37.5%; // 1rem = 6px; 6px/16px = 50%
+  }
+}
+
+body {
+  // height: 100vh;
+  // overflow: hidden;
+  font-family: $font-primary;
+  box-sizing: border-box; /* By default this is not inherited */
+  color: #ffffff;
+  line-height: 1.6;
+
+  //dev
+  background-color: var(--color-bg-dark);
+}

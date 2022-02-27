@@ -1,0 +1,262 @@
+.about-section {
+  @include common-section-css;
+  position: relative;
+
+  display: grid;
+  grid-template-rows: 0.3fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+  align-items: center;
+  // justify-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: min-content min-content min-content min-content;
+    justify-items: center;
+  }
+
+  &__bg {
+    @include absBgFull;
+
+    background-image: url('/src/assets/img/galaxy.webp');
+    // background-attachment: fixed;
+  }
+
+  .heading-secondary {
+    justify-self: start;
+    grid-column: 1 / -1;
+  }
+}
+
+.about-me {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-bg-dark),
+    var(--color-primary-dark)
+  );
+  border-radius: 1rem;
+  // min-height: 50%;
+  // width: 90%;
+
+  padding: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1 / -1;
+  }
+
+  &__interests {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & > li {
+      transition: all 0.2s;
+      border-radius: 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-bg-dark);
+        color: var(--color-primary);
+        transform: rotate(-5deg) scale(1.1);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.contact {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-bg-dark),
+    var(--color-primary-dark)
+  );
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  display: grid;
+  // grid-template-rows: 1fr;
+  grid-template-columns: max-content repeat(4, minmax(5rem, 1fr));
+  align-items: center;
+  justify-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1; // Main element
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    justify-self: stretch;
+  }
+
+  &__heading {
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__item {
+    &__icon {
+      height: 7rem;
+      width: 7rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-primary),
+          var(--color-bg-light-dark)
+        );
+
+        // background-color: var(--color-bg-lighter-dark);
+        transform: translateY(-0.5rem) scale(1.03);
+        box-shadow: 0 2rem 2rem rgba(black, 0.2);
+      }
+
+      // When pressed
+      &:active,
+      &:focus {
+        /* This creates the button pressed effect after the raising is reduced from hovered height */
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+      }
+    }
+  }
+}
+
+.photos {
+  justify-self: stretch;
+  align-self: stretch;
+  padding: 5rem; // to align the photo better
+
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  @media only screen and (max-width: $bp-medium) {
+    align-self: start;
+    grid-row: 2 / 3;
+    height: 100%;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+}
+
+.card {
+  // FUNCTIONALITY
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+
+  width: 35rem; // dev
+  height: 50rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 30rem; // dev
+    height: 40rem;
+  }
+
+  &__side {
+    height: 100%;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden; // This hides the back part of the element
+    backface-visibility: hidden; // This hides the back part of the element
+    border-radius: 0.3rem;
+    overflow: hidden; // Hides children overflowing like the pictures below
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+
+    box-shadow: var(--shadow-dark);
+    border: 0.2rem solid var(--color-grey-dark-1); // should be on side, not on parent
+
+    &--front {
+      background-color: white;
+    }
+
+    &--back {
+      // Back side is already rotated, so that when we rotate it is right side
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // PICTURE SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 100%;
+    // background-blend-mode: screen; // NEW css. Does not work on IE. Blends multiple bg images together
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+
+    &--1 {
+      background-image: url('/src/assets/img/me-1.webp'); // Think in terms of final CSS file
+      filter: brightness(80%);
+    }
+
+    &--2 {
+      background-image: url('/src/assets/img/me-2.webp'); // Think in terms of final CSS file
+      filter: brightness(80%);
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 75%; // We don't want it to span whole width
+
+    font-size: 2.8rem;
+    font-family: Relative;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+
+    &-span {
+      padding: 0.3rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; // Makes a clone of decorations added to block when a word breaks
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          var(--color-primary-light-smooth),
+          var(--color-primary-dark-smooth)
+        );
+      }
+    }
+  }
+
+  // Responsive CARD below
+  // @include respond(tab-port) => We need the actual one to diff touch screens and mouse hover-able screens
+}

@@ -1,0 +1,17 @@
+// Video takes up full screen width
+.bg-video {
+  position: absolute; // Make sure the parent has position relative
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; // To ensure it is behind everything
+  filter: brightness(50%);
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; // Will fill parent while maintaining aspect ratio
+  }
+}

@@ -1,0 +1,37 @@
+// Make sure parent has position: relative
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin common-section-css {
+  // These two will kick in when screen is maximized a LOT => Ensures content is in center
+  margin: 0 auto;
+  max-width: 300rem;
+  padding: 4rem 8rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem 6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 2.5rem 4rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 2rem 2.5rem;
+  }
+}
+
+@mixin absBgFull {
+  position: absolute; // The parent must have position: relative
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(30%);
+}
