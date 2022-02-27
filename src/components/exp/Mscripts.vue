@@ -2,7 +2,7 @@
   <PerspectiveBox id="exp--1" class="exp exp--1">
     <div class="exp__bg"></div>
 
-    <img :src="mscriptsLogo" alt="company-logo" class="exp__company-logo" />
+    <img :src="mscriptsLogo" alt="mscripts logo" class="exp__company-logo" />
 
     <div class="exp__writeup">
       <h6 class="heading-tertiary ta-center mb-1">Jan 2019 - May 2021</h6>

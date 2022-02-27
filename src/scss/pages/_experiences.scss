@@ -74,8 +74,8 @@
   justify-self: stretch;
 
   display: grid;
-  // grid-template-rows: 0.5fr 0.5fr;
-  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
   grid-gap: 3rem;
@@ -91,6 +91,7 @@
 
   position: relative;
   max-width: 40rem;
+  max-height: 40rem;
   border-radius: 1rem;
   overflow: hidden;
   padding: 2rem 0;
@@ -147,7 +148,7 @@
   &__writeup {
     background-color: var(--color-grey-light-3);
     padding: 1.5rem;
-    max-width: 80%;
+    max-width: 85%;
     opacity: 0.8;
     border-radius: 1rem;
 
