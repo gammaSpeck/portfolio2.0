@@ -15,6 +15,7 @@
     <CodingLanguages />
     <Backend />
     <FrontEnd />
+    <Others />
   </section>
 </template>
 
@@ -22,4 +23,5 @@
 import CodingLanguages from '@/components/skills/CodingLanguages.vue'
 import Backend from '@/components/skills/Backend.vue'
 import FrontEnd from '@/components/skills/FrontEnd.vue'
+import Others from '@/components/skills/Others.vue'
 </script>

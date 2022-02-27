@@ -15,12 +15,12 @@ const skills = [
     icon: 'icon-typescript'
   },
   {
-    name: 'Shell script',
-    icon: 'icon-linux'
-  },
-  {
     name: 'Python',
     icon: 'icon-python'
+  },
+  {
+    name: 'Shell script',
+    icon: 'icon-linux'
   }
 ]
 </script>

@@ -11,10 +11,6 @@ const skills = [
     icon: 'icon-node-dot-js'
   },
   {
-    name: 'Jenkins',
-    icon: 'icon-jenkins'
-  },
-  {
     name: 'Redis',
     icon: 'icon-redis'
   },
@@ -27,16 +23,20 @@ const skills = [
     icon: 'icon-mongodb'
   },
   {
+    name: 'Neo4j',
+    icon: 'icon-neo4j'
+  },
+  {
     name: 'Docker',
     icon: 'icon-docker'
   },
   {
-    name: 'AWS',
-    icon: 'icon-amazonaws'
-  },
-  {
     name: 'Kubernetes',
     icon: 'icon-kubernetes'
+  },
+  {
+    name: 'AWS',
+    icon: 'icon-amazonaws'
   }
 ]
 </script>

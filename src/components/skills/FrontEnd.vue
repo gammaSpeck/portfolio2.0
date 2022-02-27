@@ -7,6 +7,10 @@ import SkillGroup from './SkillGroup.vue'
 
 const skills = [
   {
+    name: 'Vue',
+    icon: 'icon-vue-dot-js'
+  },
+  {
     name: 'React',
     icon: 'icon-react'
   },
@@ -19,16 +23,16 @@ const skills = [
     icon: 'icon-gatsby'
   },
   {
+    name: 'SASS',
+    icon: 'icon-sass'
+  },
+  {
     name: 'Bootstrap',
     icon: 'icon-bootstrap'
   },
   {
     name: 'MaterialUI',
     icon: 'icon-materialdesign'
-  },
-  {
-    name: 'SASS',
-    icon: 'icon-sass'
   },
   {
     name: 'Webpack',
