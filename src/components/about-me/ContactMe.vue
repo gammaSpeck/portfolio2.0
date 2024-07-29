@@ -17,8 +17,8 @@ import icons from '@/assets/icons/sprite.svg'
 
 const contactMethods = [
   { link: 'https://www.linkedin.com/in/madhusoodhanan-km', icon: 'icon-linkedin' },
-  { link: 'https://www.instagram.com/gammaparticle', icon: 'icon-instagram' },
+  { link: 'https://www.instagram.com/gammabursts', icon: 'icon-instagram' },
   { link: 'https://github.com/gammaSpeck', icon: 'icon-github' },
-  { link: 'mailto:madhukm3141@gmail.com', icon: 'icon-gmail' }
+  { link: 'mailto:tech@madhukm.com', icon: 'icon-gmail' }
 ]
 </script>

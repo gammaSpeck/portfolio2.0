@@ -14,7 +14,7 @@
 
     <div class="exp__writeup">
       <p class="para-med">
-        <a href="https://github.com/gammaSpeck/md-resume" class="exp__link" target="_blank">
+        <a href="https://github.com/gammaSpeck/resume2.0" class="exp__link" target="_blank">
           md-resume:
         </a>
         An open-source resume project that contains how to setup and deploy a custom resume template
