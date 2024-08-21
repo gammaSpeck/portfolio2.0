@@ -1,13 +1,15 @@
 .about-section {
   @include common-section-css;
-  position: relative;
+  & {
+    position: relative;
 
-  display: grid;
-  grid-template-rows: 0.3fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 3rem;
-  grid-column-gap: 2rem;
-  align-items: center;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    align-items: center;
+  }
   // justify-items: center;
 
   @media only screen and (max-width: $bp-small) {
@@ -18,7 +20,7 @@
   &__bg {
     @include absBgFull;
 
-    background-image: url('/src/assets/img/galaxy.webp');
+    background-image: url("/src/assets/img/galaxy.webp");
     // background-attachment: fixed;
   }
 
@@ -220,12 +222,12 @@
     border-top-right-radius: 0.3rem;
 
     &--1 {
-      background-image: url('/src/assets/img/me-1.webp'); // Think in terms of final CSS file
+      background-image: url("/src/assets/img/me-1.webp"); // Think in terms of final CSS file
       filter: brightness(80%);
     }
 
     &--2 {
-      background-image: url('/src/assets/img/me-2.webp'); // Think in terms of final CSS file
+      background-image: url("/src/assets/img/me-2.webp"); // Think in terms of final CSS file
       filter: brightness(80%);
     }
   }

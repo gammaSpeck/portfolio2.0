@@ -13,6 +13,10 @@ This portfolio was meant to be an upgrade on the original [md-portfolio](https:/
 
 - Netlify
 
----
+## Development
 
-> If you still want to see a bare bones implementation of the Portfolio (Where no Javascript Framework was used, check out [md-portfolio](https://github.com/gammaSpeck/md-portfolio))
+1. Ensure you are running the latest pnpm
+
+   ```sh
+   corepack enable && corepack prepare pnpm@latest --activate
+   ```

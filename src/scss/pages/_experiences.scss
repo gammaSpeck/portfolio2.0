@@ -1,18 +1,20 @@
 .experiences-section {
   @include common-section-css;
-  position: relative;
+  & {
+    position: relative;
 
-  display: grid;
-  grid-template-rows: 0.2fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-  align-items: center;
-  justify-items: center;
-  grid-gap: 2rem;
+    display: grid;
+    grid-template-rows: 0.2fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+  }
 
   &__bg {
     @include absBgFull;
 
-    background-image: url('/src/assets/img/starry-sky.webp');
+    background-image: url("/src/assets/img/starry-sky.webp");
     // background-attachment: fixed;
   }
 
@@ -126,7 +128,7 @@
   // }
 
   &__bg {
-    background-image: url('/src/assets/img/code.webp');
+    background-image: url("/src/assets/img/code.webp");
     background-size: cover;
     position: absolute;
     top: 0;
