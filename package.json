@@ -21,7 +21,7 @@
     "sass": "^1.77.8",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
-    "vite-tsconfig-paths": "^3.6.0",
+    "vite-tsconfig-paths": "^5.0.1",
     "vue-tsc": "^2.0.29"
   }
 }
