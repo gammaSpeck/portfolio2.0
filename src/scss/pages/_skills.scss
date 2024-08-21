@@ -1,23 +1,28 @@
 .skills-section {
   @include common-section-css;
-  position: relative;
+
+  & {
+    position: relative;
+  }
 
   &__bg {
     @include absBgFull;
     filter: brightness(20%);
 
-    background-image: url('/src/assets/img/stars-spiral.webp');
+    background-image: url("/src/assets/img/stars-spiral.webp");
     // background-attachment: fixed;
   }
 
-  display: grid;
-  // justify-items: center;
-  // align-items: center;
+  & {
+    display: grid;
+    // justify-items: center;
+    // align-items: center;
 
-  // To ensure each skill-type row does not take more than needed space
-  grid-template-rows: min-content repeat(3, min-content);
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+    // To ensure each skill-type row does not take more than needed space
+    grid-template-rows: min-content repeat(3, min-content);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
 
   @media only screen and (max-width: $bp-small) {
     grid-template-rows: min-content repeat(4, 1fr);
