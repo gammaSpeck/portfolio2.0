@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      swapy:
+        specifier: ^0.1.1
+        version: 0.1.1
       vue:
         specifier: ^3.4.38
         version: 3.4.38(typescript@5.5.4)
@@ -662,6 +665,9 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
 
+  swapy@0.1.1:
+    resolution: {integrity: sha512-iurSCHQnTgw3Jk663AFx9ZAcu5mFCUJvDBpN2aUn1U6Ec8zo8vlqtXDGLg7GH50zx5SdBf28DepKZMhw3TS1dw==}
+
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
     engines: {node: '>=0.8'}
@@ -1313,6 +1319,8 @@ snapshots:
       mz: 2.7.0
       pirates: 4.0.6
       ts-interface-checker: 0.1.13
+
+  swapy@0.1.1: {}
 
   thenify-all@1.6.0:
     dependencies:
